@@ -20,7 +20,7 @@ class PokemonRepository @Inject constructor(
         return Resource.Success(response)
     }
 
-    suspend fun getPokemonIngo(pokemonName: String): Resource<Pokemon>{
+    suspend fun getPokemonInfo(pokemonName: String): Resource<Pokemon>{
         val response = try {
             api.getPokemonInfo(pokemonName)
         } catch (e: Exception) {

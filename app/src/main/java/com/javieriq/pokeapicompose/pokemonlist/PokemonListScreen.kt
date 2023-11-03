@@ -1,5 +1,6 @@
 package com.javieriq.pokeapicompose.pokemonlist
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -165,7 +166,7 @@ fun PokedexEntry(
     viewModel: PokemonListViewModel = hiltViewModel()
 ) {
     val defaultDominantColor = MaterialTheme.colorScheme.surface
-    var dominantColor by remember { mutableStateOf(defaultDominantColor) }
+    val dominantColor by remember { mutableStateOf(defaultDominantColor) }
 
     Box(
         contentAlignment = Center,
